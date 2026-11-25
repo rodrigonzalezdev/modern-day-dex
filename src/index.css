@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  /* Fonts */
+  --font-sans: "DM Sans Variable", system-ui, sans-serif;
+  --font-mono: "DM Mono", ui-monospace, monospace;
+
+  /* Colors */
+  --color-ink: #17171a; /* all text, every 2px border, every hard shadow, the active "Index" pill */
+  --color-muted: #4a4a50; /* secondary text: "#0001 – #0151", "Showing 8 of 151", hints */
+  --color-faint: #8a8a90; /* dashed border of the empty team slots */
+  --color-star: #ffd84d; /* filled star button, the yellow count badge on "Favorites" */
+  --color-team: #fff4c2; /* background of the "Your team" card */
+  --color-signal: #ff6b3d; /* the orange dot in the "dex." logo, the shadow under "Load 24 more" */
+  --color-focus: #4c6fff; /* the outline shown when you navigate with the keyboard (Tab key) */
+
+  /*Hard shadows */
+  /* Remember the format: x-offset  y-offset  blur  color */
+  --shadow-hard-sm: 2px 2px 0 #17171a;
+  --shadow-hard-md: 3px 3px 0 #17171a;
+  --shadow-hard: 4px 4px 0 #17171a;
+  --shadow-hard-lg: 7px 7px 0 #17171a;
+
+  /* Corner radius */
+  --radius-card: 26px;
+  --radius-tile: 20px;
+  --radius-slot: 16px;
+  --radius-tab: 14px;
+}
+
+@layer base {
+  body {
+    @apply text-ink bg-white antialiased;
+  }
+
+  :focus-visible {
+    @apply outline-focus outline-3 outline-offset-3;
+  }
+}
